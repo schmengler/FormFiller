@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+/**
+ * This file is part of SSE_FormFiller for Magento.
+ *
+ * @license http://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
+ * @author Fabian Schmengler <fabian@schmengler-se.de>
+ * @category SSE
+ * @package SSE_FormFiller
+ * @copyright Copyright (c) 2014 Schmengler Software Engineering (http://www.schmengler-se.de/)
+ */
+-->
+<config>
+    <sections>
+        <dev>
+            <groups>
+                <formfiller translate="label" module="sse_formfiller">
+                    <label>Form Filler</label>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label" module="sse_formfiller">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <only_in_developer_mode translate="label,comment" module="sse_formfiller">
+                            <label>Show button only in developer mode</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[If set to yes, the "Fill Form" button is only shown in developer mode. The scripts are loaded regardless and can be used on the JavaScript console, for example with <tt>formFiller.fill(billingForm.form)</tt>]]></comment>
+                        </only_in_developer_mode>
+                    </fields>
+                </formfiller>
+            </groups>
+        </dev>
+    </sections>
+</config>

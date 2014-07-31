@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * This file is part of SSE_FormFiller for Magento.
+ *
+ * @license http://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
+ * @author Fabian Schmengler <fabian@schmengler-se.de>
+ * @category SSE
+ * @package SSE_FormFiller
+ * @copyright Copyright (c) 2014 Schmengler Software Engineering (http://www.schmengler-se.de/)
+ */
+-->
+<config>
+    <modules>
+        <SSE_FormFiller>
+            <version>0.1.0</version>
+        </SSE_FormFiller>
+    </modules>
+    <frontend>
+        <layout>
+            <updates>
+                <sse_formfiller module="SSE_FormFiller">
+                    <file>sse_formfiller.xml</file>
+                </sse_formfiller>
+            </updates>
+        </layout>
+        <events>
+            <core_block_abstract_to_html_after>
+                <observers>
+                    <sse_formfiller>
+                        <class>sse_formfiller/observer</class>
+                        <method>addFormFiller</method>
+                    </sse_formfiller>
+                </observers>
+            </core_block_abstract_to_html_after>
+        </events>
+        <translate>
+            <modules>
+                <SSE_FormFiller>
+                    <files>
+                        <default>SSE_FormFiller.csv</default>
+                    </files>
+                </SSE_FormFiller>
+            </modules>
+        </translate>
+    </frontend>
+    <global>
+        <models>
+            <sse_formfiller>
+                <class>SSE_FormFiller_Model</class>
+            </sse_formfiller>
+        </models>
+        <helpers>
+            <sse_formfiller>
+                <class>SSE_FormFiller_Helper</class>
+            </sse_formfiller>
+        </helpers>
+    </global>
+    <default>
+        <dev>
+            <formfiller>
+                <enabled>1</enabled>
+                <only_in_developer_mode>0</only_in_developer_mode>
+            </formfiller>
+        </dev>
+    </default>
+    <adminhtml>
+        <translate>
+            <modules>
+                <SSE_FormFiller>
+                    <files>
+                        <default>SSE_FormFiller.csv</default>
+                    </files>
+                </SSE_FormFiller>
+            </modules>
+        </translate>
+    </adminhtml>
+</config>

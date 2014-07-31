@@ -1,0 +1,16 @@
+{
+    "name": "sse/formfiller",
+    "license": "osl-3.0",
+    "type": "magento-module",
+    "description": "Development tool: Pre-fill forms with random data",
+    "homepage": "http://www.schmengler-se.de/",
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    },
+    "authors":[
+        {
+            "name":"Fabian Schmengler",
+            "email":"fabian@schmengler-se.de"
+        }
+    ]
+}

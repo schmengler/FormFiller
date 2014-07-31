@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+/**
+ * This file is part of SSE_FormFiller for Magento.
+ *
+ * @license http://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
+ * @author Fabian Schmengler <fabian@schmengler-se.de>
+ * @category SSE
+ * @package SSE_FormFiller
+ * @copyright Copyright (c) 2014 Schmengler Software Engineering (http://www.schmengler-se.de/)
+ */
+-->
+<layout version="0.1.0">
+    <add_formfiller_script>
+        <reference name="head">
+		   <block type="core/text" name="fillform.faker.js">
+		      <action method="setText" ifconfig="dev/formfiller/enabled">
+		        <text><![CDATA[<script src="//cdnjs.cloudflare.com/ajax/libs/Faker/0.7.2/MinFaker.js" type="text/javascript"></script>]]></text>
+		      </action>
+		    </block>
+            <action method="addJs" ifconfig="dev/formfiller/enabled"><script>sse/formfiller.js</script></action>
+        </reference>
+    </add_formfiller_script>
+    <checkout_onepage_index>
+        <update handle="add_formfiller_script"></update>
+    </checkout_onepage_index>
+</layout>

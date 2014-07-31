@@ -1,0 +1,5 @@
+"Form Filler","Form Filler"
+"Enabled","Enabled"
+"Show button only in developer mode","Show button only in developer mode"
+"If set to yes, the ""Fill Form"" button is only shown in developer mode. The scripts are loaded regardless and can be used on the JavaScript console, for example with <tt>formFiller.fill(billingForm.form)</tt>","If set to yes, the ""Fill Form"" button is only shown in developer mode. The scripts are loaded regardless and can be used on the JavaScript console, for example with <tt>formFiller.fill(billingForm.form)</tt>"
+"Fill form with random data","Fill form with random data"
