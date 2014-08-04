@@ -1,6 +1,6 @@
-SSE_FillForms
+SSE_FormFiller
 ======
-Manually testing the Magento guest checkout can be tedious. To make it easier, **SSE_FillForm** adds a button "Fill form with random data" to the shipping and billing address forms.
+Manually testing the Magento guest checkout can be tedious. To make it easier, **SSE_FormFiller** adds a button "Fill form with random data" to the shipping and billing address forms.
 
 ## Installation
 
@@ -10,11 +10,11 @@ Download the [current version from Github](https://github.com/schmengler/FormFil
 
 ### With Composer ###
 
-In your project's `composer.json`, add `sse/fillform` to your dependencies:
+In your project's `composer.json`, add `sse/formfiller` to your dependencies:
 
 	{
 		"require-dev": {
-			"sse/fillform": "dev-master"
+			"sse/formfiller": "dev-master"
 		}
 	}
 
