@@ -58,7 +58,7 @@ class SSE_FormFiller_Model_Observer extends Mage_Core_Model_Abstract
      */
     protected function _getSupportedBlocks()
     {
-    	return array('Mage_Checkout_Block_Onepage_Billing', 'Mage_Checkout_Block_Onepage_Shipping');
+    	return ['Mage_Checkout_Block_Onepage_Billing', 'Mage_Checkout_Block_Onepage_Shipping', 'Mage_Customer_Block_Address_Edit'];
     }
     /**
      * Returns HTML for form filler button
