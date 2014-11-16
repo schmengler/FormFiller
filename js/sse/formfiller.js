@@ -1,10 +1,6 @@
 SSE = window.SSE || {};
 SSE.FormFiller = {};
 
-SSE.FormFiller._rand = function(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-};
-
 SSE.FormFiller.Filler = Class.create();
 SSE.FormFiller.Filler.prototype = {
     'initialize' : function() {
@@ -46,12 +42,13 @@ SSE.FormFiller.AddressData.prototype = {
         this.values.postcode  = faker.Address.zipCode();
         this.values.telephone = faker.PhoneNumber.phoneNumber();
         this.values.fax       = faker.PhoneNumber.phoneNumber();
+        this.values.email     = faker.Internet.email() + '.example.com';
         this.addCustomFields();
     },
     'addCustomFields' : function()
     {
     	// add your custom address attributes here:
-    	this.house_number = this.faker.random.number();
+    	this.values.house_number = this.faker.random.number(999);
     }
 };
 
@@ -66,7 +63,7 @@ SSE.FormFiller.FormHelper.prototype = {
            var $el  = $(el);
            if ($el) {
                var len  = $el.select('option').length - 1;
-               $el.select('option')[SSE.FormFiller._rand(1, len)].selected = true;
+               $el.select('option')[this.faker.random.number(len) + 1].selected = true;
            }
     }
 };
