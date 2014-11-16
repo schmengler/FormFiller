@@ -11,6 +11,8 @@ SSE.FormFiller.Filler.prototype = {
             this.fillAddressForm(form, 'billing:');
         } else if (form.id == 'co-shipping-form') {
             this.fillAddressForm(form, 'shipping:');
+        } else if (form.id == 'form-validate') {
+            this.fillAddressForm(form, '');
         } else {
             alert('Form with id ' + form.id + ' not recognized');
         }
@@ -37,9 +39,11 @@ SSE.FormFiller.AddressData.prototype = {
         this.values.company   = faker.Company.companyName();
     
         this.values.street1   = faker.Address.streetAddress();
+        this.values.street_1   = faker.Address.streetAddress();
         this.values.street2   = faker.Address.secondaryAddress();
         this.values.city      = faker.Address.city();
         this.values.postcode  = faker.Address.zipCode();
+        this.values.zip       = faker.Address.zipCode();
         this.values.telephone = faker.PhoneNumber.phoneNumber();
         this.values.fax       = faker.PhoneNumber.phoneNumber();
         this.values.email     = faker.Internet.email() + '.example.com';

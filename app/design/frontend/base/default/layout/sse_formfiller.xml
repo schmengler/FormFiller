@@ -24,4 +24,7 @@
     <checkout_onepage_index>
         <update handle="add_formfiller_script"></update>
     </checkout_onepage_index>
+    <customer_address_form>
+        <update handle="add_formfiller_script"></update>
+    </customer_address_form>
 </layout>
