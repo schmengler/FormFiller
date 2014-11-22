@@ -5,7 +5,7 @@
     "description": "Development tool: Pre-fill forms with random data",
     "homepage": "http://www.schmengler-se.de/2014/08/magento-testing-formulare-mit-einem-klick-ausfuellen/",
     "require": {
-        "php": ">=5.4"
+        "php": ">=5.4",
         "magento-hackathon/magento-composer-installer": "*"
     },
     "authors":[
