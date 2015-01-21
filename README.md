@@ -30,7 +30,7 @@ and add the Github repository:
 	}
 
 ## Version 
-* Version 0.1.0
+* Version 0.2.1
 
 ## Configuration
 
@@ -43,11 +43,21 @@ The module can be configured in the Magento backend in `System > Configuration >
 
 - Billing Address
 - Shipping Address
+- Edit Customer Address
+- Customer Registration
 
 The module is ready to be extended to support other forms as well:
 
 1. Add the class name of the block that contains the form in `SSE_FormFiller_Model_Observer::_getSupportedBlocks()`
 2. Implement the form fill logic dependent on the form id in `SSE.FormFiller.Filler.fill()` (file `js/sse/formfiller.js`)
+
+## Usage in any Magento instance without installation
+
+You can use the form filler in any Magento instance via bookmarklets without installing the extension. It's a bit less convenient and not configurable but it does the job:
+
+* Copy the Bookmarklets from here: https://gist.github.com/schmengler/6244d14a03cbee0cf820
+* On a page with fillable form, use the "Load FormFiller" bookmarklet, then the appropiate "Fill form" bookmarklet
+
 
 ## License 
 * see [LICENSE](https://github.com/schmengler/blob/master/license.txt) file
