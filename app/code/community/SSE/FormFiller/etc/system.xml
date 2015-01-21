@@ -43,6 +43,17 @@
                             <show_in_store>1</show_in_store>
                             <comment><![CDATA[If set to yes, the "Fill Form" button is only shown in developer mode. The scripts are loaded regardless and can be used on the JavaScript console, for example with <tt>formFiller.fill(billingForm.form)</tt>]]></comment>
                         </only_in_developer_mode>
+                        <default_password translate="label" module="sse_formfiller">
+                            <label>Default password for registration forms</label>
+                            <frontend_type>text</frontend_type>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </default_password>
                     </fields>
                 </formfiller>
             </groups>

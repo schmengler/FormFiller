@@ -15,11 +15,4 @@
  */
 class SSE_FormFiller_Helper_Data extends Mage_Core_Helper_Abstract
 {
-
-// Schmengler Software Engineering Tag NEW_CONST
-
-// Schmengler Software Engineering Tag NEW_VAR
-
-// Schmengler Software Engineering Tag NEW_METHOD
-
 }

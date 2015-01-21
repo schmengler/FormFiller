@@ -45,6 +45,11 @@
         </translate>
     </frontend>
     <global>
+        <blocks>
+            <sse_formfiller>
+                <class>SSE_FormFiller_Block</class>
+            </sse_formfiller>
+        </blocks>
         <models>
             <sse_formfiller>
                 <class>SSE_FormFiller_Model</class>
@@ -61,6 +66,7 @@
             <formfiller>
                 <enabled>1</enabled>
                 <only_in_developer_mode>0</only_in_developer_mode>
+                <default_password>test123</default_password>
             </formfiller>
         </dev>
     </default>

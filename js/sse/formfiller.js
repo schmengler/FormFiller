@@ -1,5 +1,5 @@
 SSE = window.SSE || {};
-SSE.FormFiller = {};
+SSE.FormFiller = SSE.FormFiller || {};
 
 SSE.FormFiller.Filler = Class.create();
 SSE.FormFiller.Filler.prototype = {
@@ -33,11 +33,11 @@ SSE.FormFiller.AddressData.prototype = {
     'values' : {},
     'initialize' : function(faker) {
         this.faker     = faker;
-        
+
         this.values.firstname = faker.Name.firstName();
         this.values.lastname  = faker.Name.lastName();
         this.values.company   = faker.Company.companyName();
-    
+
         this.values.street1   = faker.Address.streetAddress();
         this.values.street_1   = faker.Address.streetAddress();
         this.values.street2   = faker.Address.secondaryAddress();
@@ -46,7 +46,17 @@ SSE.FormFiller.AddressData.prototype = {
         this.values.zip       = faker.Address.zipCode();
         this.values.telephone = faker.PhoneNumber.phoneNumber();
         this.values.fax       = faker.PhoneNumber.phoneNumber();
-        this.values.email     = faker.Internet.email() + '.example.com';
+
+        var email = faker.Internet.email() + '.example.com';
+        this.values.email         = email;
+        this.values.email_address = email;
+
+        var password = SSE.FormFiller.DEFAULT_PASSWORD || 'test123';
+        this.values.password          = password;
+        this.values.confirmation      = password;
+        this.values.customer_password = password;
+        this.values.confirm_password  = password;
+
         this.addCustomFields();
     },
     'addCustomFields' : function()

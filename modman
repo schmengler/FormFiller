@@ -1,4 +1,5 @@
 app/code/community/SSE/FormFiller app/code/community/SSE/FormFiller
 app/design/frontend/base/default/layout/sse_formfiller.xml app/design/frontend/base/default/layout/sse_formfiller.xml
+app/design/frontend/base/default/template/sse_formfiller app/design/frontend/base/default/template/sse_formfiller
 app/etc/modules/SSE_FormFiller.xml app/etc/modules/SSE_FormFiller.xml
 js/sse/formfiller.js js/sse/formfiller.js

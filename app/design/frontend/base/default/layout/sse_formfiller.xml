@@ -12,12 +12,14 @@
 -->
 <layout version="0.1.0">
     <add_formfiller_script>
+        <block type="sse_formfiller/script" name="formfiller.params" />
         <reference name="head">
-		   <block type="core/text" name="fillform.faker.js">
-		      <action method="setText" ifconfig="dev/formfiller/enabled">
-		        <text><![CDATA[<script src="//cdnjs.cloudflare.com/ajax/libs/Faker/0.7.2/MinFaker.js" type="text/javascript"></script>]]></text>
-		      </action>
-		    </block>
+           <block type="core/text" name="formfiller.faker.js">
+              <action method="setText" ifconfig="dev/formfiller/enabled">
+                <text><![CDATA[<script src="//cdnjs.cloudflare.com/ajax/libs/Faker/0.7.2/MinFaker.js" type="text/javascript"></script>]]></text>
+              </action>
+            </block>
+            <action method="append" ifconfig="dev/formfiller/enabled"><block>formfiller.params</block></action>
             <action method="addJs" ifconfig="dev/formfiller/enabled"><script>sse/formfiller.js</script></action>
         </reference>
     </add_formfiller_script>
@@ -27,4 +29,7 @@
     <customer_address_form>
         <update handle="add_formfiller_script"></update>
     </customer_address_form>
+    <customer_account_create>
+        <update handle="add_formfiller_script"></update>
+    </customer_account_create>
 </layout>
